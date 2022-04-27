@@ -95,7 +95,6 @@
   text-decoration: underline;
  }
 
-
 .header h1 {
   position: relative;
   text-align: center;
@@ -144,7 +143,7 @@ h1 {
 }
 
 .trend1 {
-  width: 410px;
+  width: 408px;
   height: 320px;
   background-image: url("../images/trend1.jpg");
   background-repeat: no-repeat;
@@ -167,12 +166,13 @@ h1 {
 }
 
 .trend_info {
+  position: absolute;
   max-width: 365px;
   z-index: 1;
   border: 2px solid #b59f5b;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
   padding-top: 40px;
   padding-left: 35px;
   padding-bottom: 35px; 
@@ -191,7 +191,7 @@ h1 {
 }
 
 .trend2 {
-  width: 410px;
+  width: 408px;
   height: 320px;
   background-image: url("../images/trend2.jpg");
   background-repeat: no-repeat;
@@ -214,7 +214,7 @@ h1 {
 }
 
 .trend3 {
-  width: 410px;
+  width: 408px;
   height: 320px;
   background-image: url("../images/trend3.jpg");
   background-repeat: no-repeat;
@@ -237,7 +237,7 @@ h1 {
 }
 
 .trend4 {
-  width: 410px;
+  width: 408px;
   height: 320px;
   background-image: url("../images/trend4.jpg");
   background-repeat: no-repeat;
@@ -262,6 +262,7 @@ h1 {
 .posts {
   display: flex;
   justify-content: center;
+  width: 100%
 }
 
 .news {
@@ -328,7 +329,6 @@ h1 {
   font-weight: bold;
   color: #000000;
   text-transform: uppercase;
-  line-height: 24px;
   font-size: 20px;
   line-height: 24px;
 }
@@ -378,6 +378,7 @@ h1 {
   margin-top: 65px;
   margin-left: 122px;
   width: 270px;
+  justify-content: center;
 }
 
 .h3 {
@@ -628,6 +629,7 @@ h1 {
 .products {
    display: flex;
    justify-content: space-between;
+   max-width: 1170px;
 }
 
 .product {
@@ -635,17 +637,18 @@ h1 {
   flex-wrap: wrap;
   margin-left: 27px;
   margin-right: 27px;
-  max-width: 300px;
+  width: 27%;
 }
 
 .product_info {
-  height: 265px;
+  /*height: 265px;*/
   margin-top: -33px;
   margin-left: -24px;
   margin-right: -24px;
   padding-top: 56px;
   padding-left: 24px;
   padding-right: 24px;
+  padding-bottom: 30px;
   border: 2px solid #b59f5b;
   z-index: 1;
 }
@@ -790,12 +793,13 @@ h1 {
 
 @media (min-width: 641px) and (max-width: 1200px) {
   .logo-nav {
-    max-width: 700px;
+    max-width: 696px;
   }
 
  .logo {
    width: 157px;
- } 
+  } 
+
   .nav-nav {
     display: none;
   }
@@ -846,10 +850,39 @@ h1 {
     font-size: 18px;
   } 
 
+  .trends {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .trend1 {
-    width: 384px;
+    max-width: 384px;
+    height: 248px;
+    margin-right: 3px;  
+  }
+
+  .trend2 {
+    max-width: 384px;
     height: 248px;  
   }
+
+  .trend3 {
+    max-width: 384px;
+    height: 248px;
+    margin-top: 3px;
+    margin-right: 3px;  
+  }
+
+  .trend4 {
+    max-width: 384px;
+    height: 248px;
+    margin-top: 3px;  
+  }
+
+  /*.posts {
+    max-width: 696px;
+  }*/
 
   .posts .new{
     max-width: 696px;
@@ -887,6 +920,10 @@ h1 {
     margin-top: 23px;
   }
 
+  .post-lists {
+    margin-left: 0;
+}
+
   .shop {
     max-width: 696px;
   }
@@ -894,11 +931,13 @@ h1 {
   .products {
     flex-wrap: wrap;
     margin: auto;
+    max-width: 696px;
   }
 
   .product {
-    max-width: 292px;
+    width: 42%;
   }
+
   .product:nth-child(n + 3) {
     margin-top: 28px;
   }
@@ -966,10 +1005,11 @@ h1 {
   } 
 
   .header h1 {
-    margin-top:  90px;
-    width: 277px;
+    margin-top:  220px;
+    max-width: 277px;
     line-height: 36px;
   } 
+
   h1 {
     font-size: 26px; 
   } 
@@ -979,9 +1019,43 @@ h1 {
     font-size: 16px;
   } 
 
-  .trend1 {
+  .trends {
     width: 100%;
-    /*height: 248px;*/  
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .trend1 {
+    max-width: 360px;
+    height: 248px;  
+  }
+
+  .trend2 {
+    max-width: 360px;
+    height: 248px;
+    margin-top: 2px;  
+  }
+
+  .trend3 {
+    max-width: 360px;
+    height: 248px;
+    margin-top: 2px;  
+  }
+
+  .trend4 {
+    max-width: 360px;
+    height: 248px;
+    margin-top: 2px;    
+  }
+
+  .posts {
+    display: block;
+  }
+
+  .post {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 330px;
   }
 
   .news {
@@ -990,6 +1064,8 @@ h1 {
 
   .new {
     flex-wrap: wrap;
+    width: 330px;
+
   }
 
   .new:nth-child(n + 2) {
@@ -997,7 +1073,86 @@ h1 {
   } 
 
   .picture {
+    width: 330px;
+  }
+
+  .post {
+    margin-top: 17px;
+  }
+
+  .h2 {
+    width: 330px;
+    margin-top: 17px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .info {
+    margin-top: 27px;
+    margin-bottom: 24px; 
+  }
+  
+  .post-text1 {
+    font-size: 14px;
+    line-height: 20px;
+    width: 330px;
+  }
+
+  .post-text1::after {
+    display: block;
+    content: "";
+    margin: 4px auto;
+    width: 330px;
+    height: 3px;
+    background-color: #eeeeee;
+    margin-top: 23px;
+  }
+
+  .post-text {
+    font-size: 14px;
+    line-height: 20px;
+    width: 330px;
+  }
+
+  .post-lists {
+    margin-top: 46px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 330px;
+  }
+
+  .shop {
     max-width: 330px;
+  }
+
+  .products {
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 330px;
+  }
+
+  .product {
+    width: 88%;
+  }
+
+  .product:nth-child(n + 2) {
+    margin-top: 28px;
+  }
+
+  .product_info {
+    /*height: 215px;*/
+    margin-top: -28px;
+    margin-left: -18px;
+    margin-right: -18px;
+    padding-top: 53px;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-bottom: 26px;
+  }
+
+  .button-shop {
+    margin-bottom: 26px;
   }
 
 
