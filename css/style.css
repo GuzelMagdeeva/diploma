@@ -32,7 +32,6 @@
   width: 100%;
   height: 100%;
   justify-content: center;
-  text-align: center;
   position: fixed;
   z-index: 3;
 }
@@ -53,14 +52,14 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-content: center;
-  text-align: center;
   width: 400px;
   max-height: 800px;
   background-color: #fff ;
   z-index: 4;
   position: relative;
   margin-top: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .button_close {
@@ -94,8 +93,6 @@
   font-size: 16px;
   margin-bottom: 15px;
   text-align: left;
-  margin-left: 25px;
-  margin-right: 25px;
 }
 
 .select {
@@ -116,7 +113,7 @@
   color: #767877; 
   background-image: url("../svg/form-arrows.svg");
   background-color: #f3f7f6;
-  background-size: contain;
+  background-size: 15px 25px;
   background-repeat: no-repeat;
   background-position: right 5px center;
 }
@@ -129,6 +126,7 @@
 .radio-group {
   display: inline-block;
   font-size: 15px;
+
 }
 
 .radio-group:nth-of-type(n+2) {
@@ -169,6 +167,7 @@
   display: inline-block;
   vertical-align: middle;
   margin-right: 8px;
+
 }     
 
 .field {
@@ -181,7 +180,6 @@
   background-color: #f3f7f6;
   font-family: OpenSans;
   font-size: 14px;
-  text-align: left;
 }
 
 .button {
@@ -323,10 +321,11 @@
 
 .trend {
   width: 24.5%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.trend1 {
-  /*width: 408px;*/
+.foto1 {
   min-height: 320px;
   background-image: url("../images/trend1.jpg");
   background-repeat: no-repeat;
@@ -334,9 +333,10 @@
   background-size: cover;
   background-color: #000000;
   position: relative;
+  z-index: 1;
 }
 
-.trend1::before {
+.foto1::before {
   content: "";
   background-color: #000;
   position: absolute;
@@ -345,20 +345,19 @@
   right: 0;
   bottom: 0;
   opacity: 0.6;
-  z-index: 0;
+  z-index: -1;
 }
 
 .trend_info {
-  position: absolute;
-  z-index: 1;
+  align-self: end;
   border: 2px solid #b59f5b;
-  left: 20px;
-  right: 20px;
-  bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
   padding-top: 40px;
   padding-left: 35px;
   padding-right: 35px;
-  padding-bottom: 35px; 
+  padding-bottom: 35px;
 }
 
 .h2_trend {
@@ -383,8 +382,7 @@
   font-size: 20px;
 }
 
-.trend2 {
-  /*width: 408px;*/
+.foto2 {
   min-height: 320px;
   background-image: url("../images/trend2.jpg");
   background-repeat: no-repeat;
@@ -392,9 +390,10 @@
   background-size: cover;
   background-color: #000000;
   position: relative;
+  z-index: 1;
 }
 
-.trend2::before {
+.foto2::before {
   content: "";
   background-color: #000;
   position: absolute;
@@ -403,11 +402,10 @@
   right: 0;
   bottom: 0;
   opacity: 0.6;
-  z-index: 0;
+  z-index: -1;
 }
 
-.trend3 {
-  /*width: 408px;*/
+.foto3 {
   min-height: 320px;
   background-image: url("../images/trend3.jpg");
   background-repeat: no-repeat;
@@ -415,9 +413,10 @@
   background-size: cover;
   background-color: #000000;
   position: relative;
+  z-index: 1;
 }
 
-.trend3::before {
+.foto3::before {
   content: "";
   background-color: #000;
   position: absolute;
@@ -426,11 +425,10 @@
   right: 0;
   bottom: 0;
   opacity: 0.6;
-  z-index: 0;
+  z-index: -1;
 }
 
-.trend4 {
-  /*width: 408px;*/
+.foto4 {
   min-height: 320px;
   background-image: url("../images/trend4.jpg");
   background-repeat: no-repeat;
@@ -438,9 +436,10 @@
   background-size: cover;
   background-color: #000000;
   position: relative;
+  z-index: 1;
 }
 
-.trend4::before {
+.foto4::before {
   content: "";
   background-color: #000;
   position: absolute;
@@ -449,7 +448,7 @@
   right: 0;
   bottom: 0;
   opacity: 0.6;
-  z-index: 0;
+  z-index: -1;
 }
 
 .posts {
@@ -682,7 +681,7 @@
 .subscribe {
   display: flex;
   flex-wrap: wrap;
-  max-widht: 270px;
+  max-width: 270px;
   justify-content: center;
 }
 
@@ -760,12 +759,12 @@
 
 .themes {
   margin-top: 62px;
-  widht: 100%;
+  width: 100%;
 }
 
 .theme-list {
   margin-top: 29px;
-    widht: 100%;
+  width: 100%;
 }
 
 .theme {
@@ -927,59 +926,33 @@
   clip: rect(1px 1px 1px 1px);
 }
 
-.icon-twitter {
-  background-image: url("../svg/004-twitter.svg");
+.icon {
   background-repeat: no-repeat;
   background-size: 22px;
   background-position: center;
   display: block;
   width: 20px;
   height: 45px;
-  /*margin: 8px 13px;*/
+}
+
+.icon-twitter {
+  background-image: url("../svg/004-twitter.svg");
 }
 
 .icon-pinterest {
   background-image: url("../svg/001-pinterest.svg");
-  background-repeat: no-repeat;
-  background-size: 22px;
-  background-position: center;
-  display: block;
-  width: 20px;
-  height: 45px;
-  /*margin: 8px 13px;*/
 }
 
 .icon-facebook {
   background-image: url("../svg/002-facebook-logo.svg");
-  background-repeat: no-repeat;
-  background-size: 22px;
-  background-position: center;
-  display: block;
-  width: 20px;
-  height: 45px;
-  /*margin: 8px 13px;*/
 }
 
 .icon-instagram {
   background-image: url("../svg/005-instagram.svg");
-  background-repeat: no-repeat;
-  background-size: 22px;
-  background-position: center;
-  display: block;
-  width: 20px;
-  height: 45px;
-  /*margin: 8px 13px;*/
 }
 
 .icon-tumblr {
   background-image: url("../svg/003-tumblr.svg");
-  background-repeat: no-repeat;
-  background-size: 22px;
-  background-position: center;
-  display: block;
-  width: 20px;
-  height: 45px;
-  /*margin: 8px 13px;*/
 }
 
 .copyright {
@@ -1056,7 +1029,7 @@
     font-size: 18px;
   }
 
-   .trends {
+  .trends {
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
@@ -1066,27 +1039,23 @@
     width: 49%;
   }
 
-  .trend1 {
-    /*max-width: 384px;*/
+  .foto1 {
     min-height: 248px;
     margin-right: 3px;  
   }
 
-  .trend2 {
-    /*max-width: 384px;*/
+  .foto2 {
     min-height: 248px;  
   }
 
-  .trend3 {
-    /*max-width: 384px;*/
+  .foto3 {
     min-height: 248px;
     margin-top: 3px;
     margin-right: 3px;  
   }
 
-  .trend4 {
-    /*max-width: 384px;*/
-    min-height: 248px;
+  .foto4 {
+     min-height: 248px;
     margin-top: 3px;  
   }
 
@@ -1168,22 +1137,22 @@
     width: 24.5%;
   }
 
-  .trend1 {
+  .foto1 {
     min-height: 248px;
     margin-right: 0;
   }
 
-  .trend2 {
+  .foto2 {
     min-height: 248px;  
   }
 
-  .trend3 {
+  .foto3 {
     min-height: 248px;
     margin-top: 0;
     margin-right: 0;
   }
 
-  .trend4 {
+  .foto4 {
     min-height: 248px;
     margin-top: 0;  
   }
@@ -1285,7 +1254,6 @@
     margin-top:  100px;
     max-width: 277px;
     line-height: 36px;
-
   } 
 
   .h1 {
@@ -1307,26 +1275,22 @@
     width: 100%;
   }
 
-  .trend1 {
-    /*max-width: 360px;*/
+  .foto1 {
     min-height: 248px;  
   }
 
-  .trend2 {
-    /*max-width: 360px;*/
+  .foto2 {
     min-height: 248px;
     margin-top: 2px;  
   }
 
-  .trend3 {
-    /*max-width: 360px;*/
+  .foto3 {
     min-height: 248px;
     margin-top: 2px;  
   }
 
-  .trend4 {
-    /*max-width: 360px;*/
-    min-height: 248px;
+  .foto4 {
+      min-height: 248px;
     margin-top: 2px;    
   }
 
@@ -1417,7 +1381,6 @@
   }
 
   .product_info {
-    /*height: 215px;*/
     margin-top: -28px;
     margin-left: -18px;
     margin-right: -18px;
@@ -1430,10 +1393,7 @@
   .button-shop {
     margin-bottom: 26px;
   }
-
-
 }
-
 
 
 @media (orientation: landscape) and (max-width: 640px) {
@@ -1442,28 +1402,27 @@
     flex-wrap: wrap;
   }
 
-
   .trend {
     width: 49%;
   }  
 
-  .trend1 {
+  .foto1 {
     min-height: 248px; 
     margin-right: 2px; 
   }
 
-  .trend2 {
+  .foto2 {
     min-height: 248px;
     margin-top: 0;  
   }
 
-  .trend3 {
+  .foto3 {
     min-height: 248px;
     margin-top: 2px;
     margin-right: 2px; 
   }
 
-  .trend4 {
+  .foto4 {
     min-height: 248px;
     margin-top: 2px; 
   }
