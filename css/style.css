@@ -717,7 +717,7 @@
 .subscribe {
   display: flex;
   flex-wrap: wrap;
-  max-width: 270px;
+  width: 100%;
   justify-content: center;
 }
 
@@ -1365,6 +1365,10 @@
     max-width: 330px;
   }
 
+  .picture_new {
+    width: 100%;
+  }
+
   .h2 {
     max-width: 330px;
     margin-top: 17px;
@@ -1403,7 +1407,7 @@
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
+    max-width: 330px;
   }
 
   .subscribe {
