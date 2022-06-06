@@ -1345,7 +1345,7 @@
 
   .news {
     margin-top: 44px;
-    width: 100%;
+    width: 90%;
     margin-right: auto;
     margin-left: auto;
   }
@@ -1430,6 +1430,10 @@
     width: 100%;
     margin-right: auto;
     margin-left: auto; 
+  }
+  
+  .img_product_foto {
+    width: 100%;
   }
 
   .product:nth-child(n + 2) {
